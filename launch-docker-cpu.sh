@@ -4,5 +4,5 @@
 if [[ "$OSTYPE" == "darwin"* ]]; then
     docker run --rm -p 8888:8888 -it -v $1:/Worldmodels worldmodels-image
 else
-    docker run --rm -it -p 8888:8888 -v $1:/Worldmodels worldmodels-image
+    docker run --rm --network=host -it -v $1:/Worldmodels worldmodels-image
 fi
